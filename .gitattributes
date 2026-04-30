@@ -1,28 +1,26 @@
-# Tell GitHub Linguist to treat platform-specific code as generated
+# Tell GitHub Linguist to treat platform-specific Flutter code as vendored
 # This ensures the repo is classified as Dart, not C++/Swift/Kotlin
 
 # Mark build outputs as generated
-build/ linguist-generated
-.dart_tool/ linguist-generated
+build/** linguist-generated
+.dart_tool/** linguist-generated
 
-# Mark Android platform code as generated
-android/ linguist-generated
-*.gradle linguist-generated
-*.gradle.kts linguist-generated
+# Mark Android platform code as vendored
+android/** linguist-vendored
+*.gradle linguist-vendored
+*.gradle.kts linguist-vendored
 
-# Mark iOS platform code as generated
-ios/ linguist-generated
-*.swift linguist-generated
-*.m linguist-generated
-*.h linguist-generated
-*.pbxproj linguist-generated
+# Mark iOS platform code as vendored
+ios/** linguist-vendored
+*.swift linguist-vendored
+*.m linguist-vendored
 
-# Mark Windows/Linux/macOS platform code as generated
-windows/ linguist-generated
-linux/ linguist-generated
-macos/ linguist-generated
-*.cc linguist-generated
-*.cpp linguist-generated
+# Mark Windows/Linux/macOS platform code as vendored
+windows/** linguist-vendored
+linux/** linguist-vendored
+macos/** linguist-vendored
+*.cc linguist-vendored
+*.cpp linguist-vendored
 
-# Ensure Dart files are recognized
+# Explicitly include Dart files
 *.dart linguist-language=Dart
