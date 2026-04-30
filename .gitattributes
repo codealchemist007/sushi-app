@@ -1,0 +1,28 @@
+# Tell GitHub Linguist to treat platform-specific code as generated
+# This ensures the repo is classified as Dart, not C++/Swift/Kotlin
+
+# Mark build outputs as generated
+build/ linguist-generated
+.dart_tool/ linguist-generated
+
+# Mark Android platform code as generated
+android/ linguist-generated
+*.gradle linguist-generated
+*.gradle.kts linguist-generated
+
+# Mark iOS platform code as generated
+ios/ linguist-generated
+*.swift linguist-generated
+*.m linguist-generated
+*.h linguist-generated
+*.pbxproj linguist-generated
+
+# Mark Windows/Linux/macOS platform code as generated
+windows/ linguist-generated
+linux/ linguist-generated
+macos/ linguist-generated
+*.cc linguist-generated
+*.cpp linguist-generated
+
+# Ensure Dart files are recognized
+*.dart linguist-language=Dart
